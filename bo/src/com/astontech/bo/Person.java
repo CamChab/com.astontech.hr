@@ -67,7 +67,7 @@ public class Person extends BaseBO{
     public Date getCreateDate() {
         return CreateDate;
     }
-    //Comment
+
     public void setCreateDate(Date createDate) {
         CreateDate = createDate;
     }
