@@ -7,7 +7,7 @@ public class Employee extends Person{
     private Date HireDate;
     private Date TermDate;
     private Date BirthDate;
-    private int PersonId;
+    private Person Person;
     private Date DateCreate;
 
     public Employee() {}
@@ -48,14 +48,12 @@ public class Employee extends Person{
         BirthDate = birthDate;
     }
 
-    @Override
-    public int getPersonId() {
-        return PersonId;
+    public Person getPerson() {
+        return Person;
     }
 
-    @Override
-    public void setPersonId(int personId) {
-        PersonId = personId;
+    public void setPerson(Person Person) {
+        this.Person = Person;
     }
 
     public Date getDateCreate() {

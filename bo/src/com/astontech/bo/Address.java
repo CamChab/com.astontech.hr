@@ -4,8 +4,8 @@ import java.sql.Date;
 
 public class Address extends BaseBO{
     private int AddressId;
-    private int ClientId;
-    private int PersonId;
+    private Client Client;
+    private Person Person;
     private EntityType AddressType;
     private int AddressNumber;
     private String Street;
@@ -28,20 +28,20 @@ public class Address extends BaseBO{
         AddressId = addressId;
     }
 
-    public int getClientId() {
-        return ClientId;
+    public Client getClient() {
+        return Client;
     }
 
-    public void setClientId(int clientId) {
-        ClientId = clientId;
+    public void setClient(Client Client) {
+        this.Client = Client;
     }
 
-    public int getPersonId() {
-        return PersonId;
+    public Person getPerson() {
+        return Person;
     }
 
-    public void setPersonId(int personId) {
-        PersonId = personId;
+    public void setPerson(Person Person) {
+        this.Person = Person;
     }
 
     public int getAddressNumber() {

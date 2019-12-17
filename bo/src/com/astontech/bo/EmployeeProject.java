@@ -4,10 +4,10 @@ import java.util.Date;
 
 public class EmployeeProject extends BaseBO{
     private int EmployeeProjectId;
-    private int ProjectId;
+    private Project Project;
     private Employee ProjectEmployee;
     private EntityType ProjectType;
-    private int VehicleId;
+    private Vehicle EmployeeProjectVehicle;
     private Date StartDate;
     private Date EndDate;
     private String Notes;
@@ -25,12 +25,12 @@ public class EmployeeProject extends BaseBO{
         EmployeeProjectId = employeeProjectId;
     }
 
-    public int getProjectId() {
-        return ProjectId;
+    public Project getProject() {
+        return Project;
     }
 
-    public void setProjectId(int projectId) {
-        ProjectId = projectId;
+    public void setProject(Project Project) {
+        this.Project = Project;
     }
 
     public Employee getProjectEmployee() {
@@ -49,12 +49,12 @@ public class EmployeeProject extends BaseBO{
         this.ProjectType = ProjectType;
     }
 
-    public int getVehicleId() {
-        return VehicleId;
+    public Vehicle getEmployeeProjectVehicle() {
+        return EmployeeProjectVehicle;
     }
 
-    public void setVehicleId(int vehicleId) {
-        VehicleId = vehicleId;
+    public void setEmployeeProjectVehicle(Vehicle EmployeeProjectVehicle) {
+        this.EmployeeProjectVehicle = EmployeeProjectVehicle;
     }
 
     public Date getStartDate() {

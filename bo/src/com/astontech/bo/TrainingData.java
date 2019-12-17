@@ -2,8 +2,8 @@ package com.astontech.bo;
 import java.util.Date;
 public class TrainingData extends BaseBO{
     private int TrainingDataId;
-    private int TrainingId;
-    private int EntityTypeId;
+    private Training Training;
+    private EntityType TrainingDataType;
     private String TrainingDataValue;
     private Date CreateDate;
 
@@ -21,20 +21,20 @@ public class TrainingData extends BaseBO{
         TrainingDataId = trainingDataId;
     }
 
-    public int getTrainingId() {
-        return TrainingId;
+    public Training getTraining() {
+        return Training;
     }
 
-    public void setTrainingId(int trainingId) {
-        TrainingId = trainingId;
+    public void setTraining(Training Training) {
+        this.Training = Training;
     }
 
-    public int getEntityTypeId() {
-        return EntityTypeId;
+    public EntityType getTrainingDataType() {
+        return TrainingDataType;
     }
 
-    public void setEntityTypeId(int entityTypeId) {
-        EntityTypeId = entityTypeId;
+    public void setTrainingDataType(EntityType TrainingDataType) {
+        this.TrainingDataType = TrainingDataType;
     }
 
     public String getTrainingDataValue() {

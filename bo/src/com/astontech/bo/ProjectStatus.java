@@ -2,7 +2,7 @@ package com.astontech.bo;
 import java.util.Date;
 public class ProjectStatus extends BaseBO{
     private int ProjectStatusId;
-    private int ProjectId;
+    private Project Project;
     private int EntityTypeId;
     private String Notes;
     private int PercentComplete;
@@ -22,12 +22,12 @@ public class ProjectStatus extends BaseBO{
         ProjectStatusId = projectStatusId;
     }
 
-    public int getProjectId() {
-        return ProjectId;
+    public Project getProject() {
+        return Project;
     }
 
-    public void setProjectId(int projectId) {
-        ProjectId = projectId;
+    public void setProject(Project Project) {
+        this.Project = Project;
     }
 
     public int getEntityTypeId() {

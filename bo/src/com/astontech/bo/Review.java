@@ -4,7 +4,7 @@ public class Review extends BaseBO{
     private int ReviewId;
     private String ReviewName;
     private Date ReviewDate;
-    private int EmployeeId;
+    private Employee ReviewEmployee;
 
     public Review(){}
     public Review(String ReviewName){
@@ -35,11 +35,11 @@ public class Review extends BaseBO{
         ReviewDate = reviewDate;
     }
 
-    public int getEmployeeId() {
-        return EmployeeId;
+    public Employee getReviewEmployee() {
+        return ReviewEmployee;
     }
 
-    public void setEmployeeId(int employeeId) {
-        EmployeeId = employeeId;
+    public void setReviewEmployee(Employee ReviewEmployee) {
+        this.ReviewEmployee = ReviewEmployee;
     }
 }

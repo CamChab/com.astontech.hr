@@ -3,7 +3,7 @@ package com.astontech.bo;
 public class VehicleModel extends BaseBO{
     private int VehicleModelId;
     private String VehicleModelName;
-    private int VehicleMakeId;
+    private VehicleMake VehicleMake;
 
     public VehicleModel(){}
     public VehicleModel(String VehicleModelName){
@@ -26,11 +26,11 @@ public class VehicleModel extends BaseBO{
         VehicleModelName = vehicleModelName;
     }
 
-    public int getVehicleMakeId() {
-        return VehicleMakeId;
+    public VehicleMake getVehicleMake() {
+        return VehicleMake;
     }
 
-    public void setVehicleMakeId(int vehicleMakeId) {
-        VehicleMakeId = vehicleMakeId;
+    public void setVehicleMake(VehicleMake VehicleMake) {
+        this.VehicleMake = VehicleMake;
     }
 }

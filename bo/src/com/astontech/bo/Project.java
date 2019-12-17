@@ -3,8 +3,8 @@ import java.util.Date;
 
 public class Project extends BaseBO{
     private int ProjectId;
-    private int ClientId;
-    private int EntityTypeId;
+    private Client ProjectClient;
+    private EntityType ProjectType;
     private int Rate;
     private Date StartDate;
     private Date EndDate;
@@ -23,20 +23,20 @@ public class Project extends BaseBO{
         ProjectId = projectId;
     }
 
-    public int getClientId() {
-        return ClientId;
+    public Client getProjectClient() {
+        return ProjectClient;
     }
 
-    public void setClientId(int clientId) {
-        ClientId = clientId;
+    public void setProjectClient(Client ProjectClient) {
+        this.ProjectClient = ProjectClient;
     }
 
-    public int getEntityTypeId() {
-        return EntityTypeId;
+    public EntityType getProjectType() {
+        return ProjectType;
     }
 
-    public void setEntityTypeId(int entityTypeId) {
-        EntityTypeId = entityTypeId;
+    public void setProjectType(EntityType ProjectType) {
+        this.ProjectType = ProjectType;
     }
 
     public int getRate() {

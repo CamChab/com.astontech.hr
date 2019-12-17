@@ -4,7 +4,7 @@ public class Email extends BaseBO{
     //region PROPERTIES
     private int EmailId;
     private String EmailAddress;
-    private int EmployeeId;
+    private Employee Employee;
     private EntityType EmailType;
     //endregion
     //region CONSTRUCTORS
@@ -30,12 +30,12 @@ public class Email extends BaseBO{
         EmailAddress = emailAddress;
     }
 
-    public int getEmployeeId() {
-        return EmployeeId;
+    public Employee getEmployee() {
+        return Employee;
     }
 
-    public void setEmployeeId(int employeeId) {
-        EmployeeId = employeeId;
+    public void setEmployee(Employee Employee) {
+        this.Employee = Employee;
     }
 
     public EntityType getEmailType() {
@@ -46,11 +46,11 @@ public class Email extends BaseBO{
         this.EmailType = EmailType;
     }
 
-    public String getEmailAddressAndEmployeeId(){
+    public String getEmailAddressAndEmployee(){
         if(this.EmailAddress == null)
             return "This Employee's Email Address is not set";
         else
-            return this.EmailAddress+" "+this.EmployeeId;
+            return this.EmailAddress+" "+this.Employee;
     }
     //endregion
 }

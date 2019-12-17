@@ -2,8 +2,8 @@ package com.astontech.bo;
 import java.util.Date;
 public class ReviewData extends BaseBO{
     private int ReviewDataId;
-    private int ReviewId;
-    private int EntityTypeId;
+    private Review Review;
+    private EntityType ReviewDataType;
     private String ReviewDataValue;
     private Date CreateDate;
 
@@ -20,20 +20,20 @@ public class ReviewData extends BaseBO{
         ReviewDataId = reviewDataId;
     }
 
-    public int getReviewId() {
-        return ReviewId;
+    public Review getReview() {
+        return Review;
     }
 
-    public void setReviewId(int reviewId) {
-        ReviewId = reviewId;
+    public void setReview(Review Review) {
+        this.Review = Review;
     }
 
-    public int getEntityTypeId() {
-        return EntityTypeId;
+    public EntityType getReviewDataType() {
+        return ReviewDataType;
     }
 
-    public void setEntityTypeId(int entityTypeId) {
-        EntityTypeId = entityTypeId;
+    public void setReviewDataType(EntityType ReviewDataType) {
+        this.ReviewDataType = ReviewDataType;
     }
 
     public String getReviewDataValue() {

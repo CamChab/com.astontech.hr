@@ -2,7 +2,7 @@ package com.astontech.bo;
 import java.util.Date;
 public class Training extends BaseBO{
     private int TrainingId;
-    private int EmployeeId;
+    private Employee TrainingEmployee;
     private String TrainingName;
     private Date CreateDate;
 
@@ -19,12 +19,12 @@ public class Training extends BaseBO{
         TrainingId = trainingId;
     }
 
-    public int getEmployeeId() {
-        return EmployeeId;
+    public Employee getTrainingEmployee() {
+        return TrainingEmployee;
     }
 
-    public void setEmployeeId(int employeeId) {
-        EmployeeId = employeeId;
+    public void setTrainingEmployee(Employee TrainingEmployee) {
+        this.TrainingEmployee = TrainingEmployee;
     }
 
     public String getTrainingName() {

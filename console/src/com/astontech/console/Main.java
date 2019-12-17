@@ -1,15 +1,16 @@
 package com.astontech.console;
 import com.astontech.bo.*;
-//import com.astontech.bo.*;
+import java.util.List;
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        LessonComplexProperties();
+        LessonCollectionsLAB();
+        //LessonComplexProperties();
         //LessonCollections();
         //LessonObjectsLAB();
         //LessonMethods();
@@ -25,6 +26,71 @@ public class Main {
 
 
     }
+    private static void LessonCollectionsLAB(){
+        List<Vehicle> VehicleList = new ArrayList<>();
+        Vehicle veh1 = new Vehicle("ABC123");
+        veh1.setId(1);
+        veh1.setVehicleId(1);
+        veh1.setYear(1998);
+        veh1.setVIN("11011001001101101");
+        veh1.setColor("Black");
+        veh1.setIsPurchase(true);
+        veh1.setPurchasePrice(7900);
+        veh1.setPurchaseDate(new Date(69,3,20, 4, 20, 69));
+        veh1.setVehicleModel(new VehicleModel("Accord"));
+        veh1.getVehicleModel().setVehicleMake(new VehicleMake("Honda"));
+        VehicleList.add(veh1);
+        Vehicle veh2 = new Vehicle("DEF456");
+        veh2.setId(2);
+        veh2.setVehicleId(2);
+        veh2.setYear(1999);
+        veh2.setVIN("66666666666666666");
+        veh2.setColor("Red");
+        veh2.setIsPurchase(false);
+        veh2.setPurchasePrice(666);
+        veh2.setPurchaseDate(new Date(-1234,5,6,6,6,6));
+        veh2.setVehicleModel(new VehicleModel("Demon"));
+        veh2.getVehicleModel().setVehicleMake(new VehicleMake("Dodge"));
+        VehicleList.add(veh2);
+        String[] Colors = new String[]{"Red","Blue","Green","Yellow","White","Black","Silver","Purple","Orange","Gold"};
+        Boolean[] Options = new Boolean[]{true,false};
+        Random random = new Random();
+
+        Vehicle veh3 = new Vehicle(RandomString.getAlphaNumericString(6));
+        veh3.setId(3);
+        veh3.setVehicleId(3);
+        veh3.setYear((int)(Math.random()*100001*100001*100001*101));
+        veh3.setVIN(String.valueOf((int)(Math.random()*10000)));
+        veh3.setColor(Colors[(int)(Math.random()*10)]);
+        veh3.setIsPurchase(random.nextBoolean());
+        veh3.setPurchasePrice((int)(Math.random()*10000));
+        veh3.setPurchaseDate(new Date((int)(Math.random()*1000),(int)(Math.random()*10),(int)(Math.random()*10),(int)(Math.random()*10),(int)(Math.random()*10),(int)(Math.random()*100)));
+        veh3.setVehicleModel(new VehicleModel(RandomString.getAlphaNumericString((int)Math.random()*10+5)));
+        veh3.getVehicleModel().setVehicleMake(new VehicleMake(RandomString.getAlphaNumericString((int)Math.random()*10+5)));
+        VehicleList.add(veh3);
+
+        for(int i=4;i<10;i++){
+            Vehicle tempVehicle = new Vehicle(RandomString.getAlphaNumericString(6));
+            tempVehicle.setId(i);
+            tempVehicle.setVehicleId(i);
+            tempVehicle.setYear((int)(Math.random()*10000));
+            tempVehicle.setVIN(String.valueOf((int)(Math.random()*10000)));
+            tempVehicle.setColor(Colors[(int)(Math.random()*10)]);
+            tempVehicle.setIsPurchase(random.nextBoolean());
+            tempVehicle.setPurchasePrice((int)(Math.random()*10000));
+            tempVehicle.setPurchaseDate(new Date((int)(Math.random()*1000),(int)(Math.random()*10),(int)(Math.random()*10),(int)(Math.random()*10),(int)(Math.random()*10),(int)(Math.random()*100)));
+            tempVehicle.setVehicleModel(new VehicleModel(RandomString.getAlphaNumericString((int)Math.random()*10+5)));
+            tempVehicle.getVehicleModel().setVehicleMake(new VehicleMake(RandomString.getAlphaNumericString((int)Math.random()*10+5)));
+            VehicleList.add(tempVehicle);
+        }
+
+
+
+        for(Vehicle SingleVehicle : VehicleList)
+            System.out.println(SingleVehicle.ToString());
+
+    }
+
     private static void LessonComplexProperties(){
         EntityType emailWorkType = new EntityType("Work");
         emailWorkType.setEntityTypeId(1);
@@ -80,7 +146,7 @@ public class Main {
         //Email
         Email em1 = new Email("wtf@holyshite.com");
         em1.setEmailId(1);
-        System.out.println(em1.getEmailAddressAndEmployeeId());
+        System.out.println(em1.getEmailAddressAndEmployee());
         //Employee
         Employee emp1 = new Employee("Camron","Chaboki");
         System.out.println(emp1.GetFullName());

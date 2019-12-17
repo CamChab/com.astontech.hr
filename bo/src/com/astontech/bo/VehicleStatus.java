@@ -2,8 +2,8 @@ package com.astontech.bo;
 import java.util.Date;
 public class VehicleStatus extends BaseBO{
     private int VehicleStatusId;
-    private int VehicleId;
-    private int EntityTypeId;
+    private Vehicle Vehicle;
+    private EntityType VehicleStatusType;
     private String Notes;
     private Date CreateDate;
 
@@ -20,20 +20,20 @@ public class VehicleStatus extends BaseBO{
         VehicleStatusId = vehicleStatusId;
     }
 
-    public int getVehicleId() {
-        return VehicleId;
+    public Vehicle getVehicle() {
+        return Vehicle;
     }
 
-    public void setVehicleId(int vehicleId) {
-        VehicleId = vehicleId;
+    public void setVehicle(Vehicle Vehicle) {
+        this.Vehicle = Vehicle;
     }
 
-    public int getEntityTypeId() {
-        return EntityTypeId;
+    public EntityType getVehicleStatusType() {
+        return VehicleStatusType;
     }
 
-    public void setEntityTypeId(int entityTypeId) {
-        EntityTypeId = entityTypeId;
+    public void setVehicleStatusType(EntityType VehicleStatuusType) {
+        this.VehicleStatusType = VehicleStatuusType;
     }
 
     public String getNotes() {

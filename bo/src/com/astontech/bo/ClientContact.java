@@ -2,8 +2,8 @@ package com.astontech.bo;
 
 public class ClientContact extends BaseBO{
     private int ClientContactId;
-    private Client ClientId;
-    private int EntityTypeId;
+    private Client Client;
+    private EntityType ClientContactType;
 
     public ClientContact(){}
     public ClientContact(int ClientContactId){
@@ -19,18 +19,18 @@ public class ClientContact extends BaseBO{
     }
 
     public Client getClientId() {
-        return ClientId;
+        return Client;
     }
 
-    public void setClientId(Client clientId) {
-        ClientId = clientId;
+    public void setClientId(Client Client) {
+        this.Client = Client;
     }
 
-    public int getEntityTypeId() {
-        return EntityTypeId;
+    public EntityType getClientContactType() {
+        return ClientContactType;
     }
 
-    public void setEntityTypeId(int entityTypeId) {
-        EntityTypeId = entityTypeId;
+    public void setClientContactType(EntityType ClientContactType) {
+        this.ClientContactType = ClientContactType;
     }
 }
