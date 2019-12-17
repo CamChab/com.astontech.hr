@@ -18,6 +18,7 @@ public class Person extends BaseBO{
     private Date CreateDate;
     private boolean IsDeleted;
     private List<Email> Emails;
+    private int abababab;
     //endregion
     //region CONSTRUCTORS
     public Person(){
