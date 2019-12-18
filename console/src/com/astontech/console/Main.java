@@ -55,9 +55,11 @@ public class Main {
         IPerson(emp1);
 
         System.out.println("---------------------");
-        String tmp = "Hello Fellow";
-        System.out.println("Original String: "+tmp);
-        System.out.println(CharHelper.backwardsChars("Original String: "+tmp));
+        //String tmp = "Hello Fellow";
+        CharHelper ch =new CharHelper();
+        ch.setS("Hello Fellow");
+        System.out.println(ch.getS());
+        System.out.println(ch.backwards());
         System.out.println("---------------------");
         pers1 = new Person("Aa", "Aa");
         Person pers2 = new Person("Aa","Ab");
