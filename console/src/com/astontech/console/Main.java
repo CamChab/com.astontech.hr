@@ -1,14 +1,24 @@
 package com.astontech.console;
 import com.astontech.bo.*;
+import com.astontech.bo.interfaces.Home;
+import com.astontech.bo.interfaces.ILocation;
+import com.astontech.bo.interfaces.IPerson;
+import com.astontech.bo.interfaces.Site;
+import common.helpers.MathHelper;
+import common.helpers.StringHelper;
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
         //Lessons Stack:
-        LessonPrinciples4LAB();
+        LessonPrinciples5LAB();
+        //LessonLogger();
+        //LessonDebugger();
+        //LessonInterfaceTest();
+        //LessonModuleHelpers();
+        //LessonPrinciples4LAB();
         //LessonValueVsRef();
         //LessonHash();
         //LessonCollectionsLAB();
@@ -27,7 +37,105 @@ public class Main {
         //LessonDataTypes();
 
 
+
     }
+    private static void LessonPrinciples5LAB(){
+        //It could be useful to check if certain fields are filled such as those in Person
+        Person pers1 = new Person("Bipin","Butala");
+        pers1.setGender("Male");
+        pers1.setTitle("Mentor");
+        IPerson(pers1);
+        System.out.println("-----------------------");
+        Employee emp1 = new Employee("Camron","Chaboki");
+        emp1.setTitle("Mentee");
+        emp1.setGender("Alpha Male");
+        IPerson(emp1);
+
+        System.out.println("---------------------");
+        String tmp = "Hello Fellow";
+        System.out.println("Original String: "+tmp);
+        System.out.println(backwardsChars("Original String: "+tmp));
+        System.out.println("---------------------");
+        pers1 = new Person("Aa", "Aa");
+        Person pers2 = new Person("Aa","Ab");
+        Person pers3 = new Person("Ab","Aa");
+        System.out.println("Person 1: "+pers1.GetFullName());
+        System.out.println("Person 2: "+pers2.GetFullName());
+        System.out.println("Person 3: "+pers3.GetFullName());
+        System.out.println("Comparing Person 1 to Person 2: "+pers1.compareTo(pers2));
+        System.out.println("Comparing Person 1 to Person 3: "+pers1.compareTo(pers3));
+        System.out.println("Comparing Person 2 to Person 3: "+pers3.compareTo(pers2));
+        System.out.println("Comparing Person 3 to Person 1: "+pers3.compareTo(pers1));
+
+        System.out.println(" ");
+        Vehicle v1 = new Vehicle("AAAAAA");
+        Vehicle v2 = new Vehicle("AAAAAB");
+        System.out.println("Vehicle 1 License Plate: "+v1.getLicensePlate());
+        System.out.println("Vehicle 2 License Plate: "+v2.getLicensePlate());
+        System.out.println("Comparing Vehicle 1 to Vehicle 2: "+v1.compareTo(v2));
+        System.out.println("Comparing Vehicle 2 to Vehicle 1: "+v2.compareTo(v1));
+
+    }
+    private static void IPerson(IPerson Iperson){
+        System.out.println("Title set: " + Iperson.IsTitleSet());
+        System.out.println("First name set: "+Iperson.IsFirstNameSet());
+        System.out.println("Last name set: "+Iperson.IsLastNameSet());
+        System.out.println("Gender set: " + Iperson.IsGenderSet());
+    }
+    private static String backwardsChars(CharSequence charSeq){
+        String newString = new String();
+        for(int i=charSeq.length()-1;i>=0;i--)
+            newString += charSeq.charAt(i);
+        return newString;
+    }
+
+    private static void LessonLogger(){}
+
+    private static void LessonDebugger(){}
+
+    private static void LessonInterfaceTest(){
+        Site MN010 = new Site();
+        MN010.setSiteName("MN010");
+        MN010.setCoffeeMachines(2);
+        MN010.setConferenceRooms(1);
+        MN010.setCubicles(8);
+        MN010.setOffices(6);
+        MN010.setTraininggDesks(36);
+
+        Home BipsHouse = new Home();
+        BipsHouse.setAddress("1 Main St.");
+        BipsHouse.setOwner(new Employee("Bipin","Butala"));
+
+        LessonInterfaces(MN010);
+        LessonInterfaces(BipsHouse);
+    }
+
+    private static void LessonInterfaces(ILocation Ilocation){
+        System.out.println("Location Name: " + Ilocation.getLocationName());
+        System.out.println("Can Have Meetings: " + Ilocation.canHaveMeetings());
+        System.out.println("Number of Workspaces: " + Ilocation.numberOfWorkspaces());
+        System.out.println("Has Coffee: " + Ilocation.hasCoffee()+"\n");
+    }
+
+    private static void LessonModuleHelpers(){
+        int n = 2;
+        MathHelper math = new MathHelper();
+        n= math.square(4);
+        System.out.println(n);
+
+        String s=StringHelper.makeBackwards("Hello Fellow");
+        System.out.println(s);
+        System.out.println(StringHelper.numberOfTokens("Hello Fellow",'l'));
+        System.out.println(StringHelper.Interleave("Hello","Fellowwwww"));
+
+        System.out.println(MathHelper.raiseTo(2,10));
+        System.out.println(MathHelper.Factorial(6));
+        System.out.println(MathHelper.isSquareRoot(4,16));
+        System.out.println(MathHelper.isSquareRoot(2,16));
+        System.out.println(MathHelper.isSquareRoot(5,25));
+        System.out.println(MathHelper.isSquareRoot(10,100));
+    }
+
     private static void LessonPrinciples4LAB(){
         Hashtable<Integer, Character> htable = new Hashtable<>();
         //Character[] palindrome = new Character[]{'N','U','R','S','E','I','S','P','Y','G','Y','P','S','I','E','S','R','U','N'};
@@ -65,13 +173,7 @@ public class Main {
         //Strings are weird because strings point to addresses on string heap
         //Reference type examples: Any Class Object we created, String, Arrays
         //Value type examples: all prim data types,
-
-
-        //Make huge Palindrome for HashTable & HashMap since they print items
-        //in backwards order relative to eachother.
-        //Make Hash Set that has words that make up a story
-        // ^ This will be funny because the items always print in random order
-    }
+        }
 
     private static void LessonValueVsRef(){
         Employee firstEmp = new Employee("Bipin","Butala");

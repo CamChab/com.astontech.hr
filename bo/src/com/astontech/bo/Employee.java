@@ -1,8 +1,10 @@
 package com.astontech.bo;
 
+import com.astontech.bo.interfaces.IPerson;
+
 import java.util.Date;
 
-public class Employee extends Person{
+public class Employee extends Person implements IPerson {
     private int EmployeeId;
     private Date HireDate;
     private Date TermDate;
@@ -62,5 +64,25 @@ public class Employee extends Person{
 
     public void setDateCreate(Date dateCreate) {
         DateCreate = dateCreate;
+    }
+
+    @Override
+    public boolean IsTitleSet() {
+        return this.getTitle() != null;
+    }
+
+    @Override
+    public boolean IsFirstNameSet() {
+        return this.getFirstName() != null;
+    }
+
+    @Override
+    public boolean IsLastNameSet() {
+        return this.getLastName() != null;
+    }
+
+    @Override
+    public boolean IsGenderSet() {
+        return this.getGender() != null;
     }
 }

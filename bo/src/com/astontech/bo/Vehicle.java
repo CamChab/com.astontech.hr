@@ -1,6 +1,8 @@
 package com.astontech.bo;
+import com.astontech.bo.interfaces.ICompareTo;
+
 import java.util.Date;
-public class Vehicle extends BaseBO{
+public class Vehicle extends BaseBO implements ICompareTo {
     private int VehicleId;
     private int Year;
     private String LicensePlate;
@@ -92,5 +94,14 @@ public class Vehicle extends BaseBO{
         return "Id:"+this.getId()+" VehicleId:"+this.VehicleId+" Year:"+this.Year+" LicensePlate:"+this.LicensePlate+" VIN:"+this.VIN
                 +" Color: "+this.Color+" IsPurchase:"+this.IsPurchase+" PurchasePrice:"+this.PurchasePrice+" PurchaseDate:"
                 +this.PurchaseDate+" VehicleMake:"+this.VehicleModel.getVehicleMake().getVehicleMakeName()+" VehicleModel:"+this.VehicleModel.getVehicleModelName();
+    }
+
+    @Override
+    public int compareTo(Object temp) {
+        Vehicle other = (Vehicle) temp;
+        for(int i=0;i<6;i++)
+            if (LicensePlate.charAt(i) < ((Vehicle) other).LicensePlate.charAt(i))
+                return 1;
+        return -1;
     }
 }

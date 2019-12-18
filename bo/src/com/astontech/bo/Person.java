@@ -1,12 +1,14 @@
 package com.astontech.bo;
 
+import com.astontech.bo.interfaces.ICompareTo;
+import com.astontech.bo.interfaces.IPerson;
+import common.helpers.*;
 import java.util.ArrayList;
 import java.util.Date;
-
 import java.util.List;
 
 
-public class Person extends BaseBO{
+public class Person extends BaseBO implements IPerson, ICompareTo {
 
     //region PROPERTIES
     private int PersonId;
@@ -26,6 +28,7 @@ public class Person extends BaseBO{
     public Person(String LastName){
         this.LastName = LastName;
     }
+    public Person(String FirstName,String LastName){this.FirstName=FirstName;this.LastName=LastName;}
     //endregion
     //region GETTERS / SETTERS
     public void setPersonId(int PersonId){
@@ -87,19 +90,65 @@ public class Person extends BaseBO{
     }
     //endregion
     //region CUSTOM METHODS
-    public static boolean isNullOrEmpty(String s){
-        return s == null || s.length() == 0;
-    }
+
 
     public String GetFullName(){
-        if(isNullOrEmpty(this.FirstName) && isNullOrEmpty(this.LastName))
+        if(StringHelper.isNullOrEmpty(this.FirstName) && StringHelper.isNullOrEmpty(this.LastName))
             return "No Name Set";
-        else if(isNullOrEmpty(this.FirstName))
+        else if(StringHelper.isNullOrEmpty(this.FirstName))
             return this.LastName;
-        else if(isNullOrEmpty(this.LastName))
+        else if(StringHelper.isNullOrEmpty(this.LastName))
             return this.FirstName;
         else
             return this.FirstName+" "+this.LastName;
     }
+
+    @Override
+    public boolean IsTitleSet() {
+        return this.getTitle() != null;
+    }
+
+    @Override
+    public boolean IsFirstNameSet() {
+        return this.getFirstName() != null;
+    }
+
+    @Override
+    public boolean IsLastNameSet() {
+        return this.getLastName() != null;
+    }
+
+
+
+    @Override
+    public boolean IsGenderSet() {
+        return this.getGender() != null;
+    }
+
+    @Override
+    public int compareTo(Object temp) {
+            Person other = (Person) temp;
+            /*if(LastName.charAt(0)<((Person)other).LastName.charAt(0))
+                return 1;*/
+            int i=0;
+        while(i<LastName.length() && i<((Person)other).LastName.length()) {
+
+            if(LastName.charAt(i) < ((Person) other).LastName.charAt(i))
+                return 1;
+            i++;
+        }
+            i=0;
+            while(i<FirstName.length() && i<((Person)other).FirstName.length()) {
+
+                if(FirstName.charAt(i) < ((Person) other).FirstName.charAt(i))
+                    return 1;
+                i++;
+            }
+            return -1;
+
+
+    }
+
+
     //endregion
 }
