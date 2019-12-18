@@ -6,8 +6,11 @@ import com.astontech.bo.interfaces.IPerson;
 import com.astontech.bo.interfaces.Site;
 import common.helpers.MathHelper;
 import common.helpers.StringHelper;
-
+import common.helpers.CharHelper;
+//import static common.helpers.CharHelper.backwardsChars;
 import java.util.*;
+
+
 
 public class Main {
 
@@ -54,7 +57,7 @@ public class Main {
         System.out.println("---------------------");
         String tmp = "Hello Fellow";
         System.out.println("Original String: "+tmp);
-        System.out.println(backwardsChars("Original String: "+tmp));
+        System.out.println(CharHelper.backwardsChars("Original String: "+tmp));
         System.out.println("---------------------");
         pers1 = new Person("Aa", "Aa");
         Person pers2 = new Person("Aa","Ab");
@@ -75,6 +78,9 @@ public class Main {
         System.out.println("Comparing Vehicle 1 to Vehicle 2: "+v1.compareTo(v2));
         System.out.println("Comparing Vehicle 2 to Vehicle 1: "+v2.compareTo(v1));
 
+        v1.compareTo(v1);
+
+
     }
     private static void IPerson(IPerson Iperson){
         System.out.println("Title set: " + Iperson.IsTitleSet());
@@ -82,12 +88,7 @@ public class Main {
         System.out.println("Last name set: "+Iperson.IsLastNameSet());
         System.out.println("Gender set: " + Iperson.IsGenderSet());
     }
-    private static String backwardsChars(CharSequence charSeq){
-        String newString = new String();
-        for(int i=charSeq.length()-1;i>=0;i--)
-            newString += charSeq.charAt(i);
-        return newString;
-    }
+
 
     private static void LessonLogger(){}
 
