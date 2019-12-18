@@ -1,15 +1,17 @@
 package com.astontech.console;
 import com.astontech.bo.*;
-import java.util.List;
-import java.util.Random;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
+
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        LessonCollectionsLAB();
+        //Lessons Stack:
+        LessonPrinciples4LAB();
+        //LessonValueVsRef();
+        //LessonHash();
+        //LessonCollectionsLAB();
         //LessonComplexProperties();
         //LessonCollections();
         //LessonObjectsLAB();
@@ -26,6 +28,121 @@ public class Main {
 
 
     }
+    private static void LessonPrinciples4LAB(){
+        Hashtable<Integer, Character> htable = new Hashtable<>();
+        //Character[] palindrome = new Character[]{'N','U','R','S','E','I','S','P','Y','G','Y','P','S','I','E','S','R','U','N'};
+        String palindrome = "NURSEISPYGYPSIESRUN";
+        for(int i=0;i<palindrome.length();i++)
+            htable.put(i,palindrome.charAt(i));
+
+        for(Integer key : htable.keySet())
+            System.out.print(htable.get(key));
+        HashMap<Integer, Character> hmap = new HashMap<>();
+        for(int i=0;i<palindrome.length();i++)
+            hmap.put(i,palindrome.charAt(i));
+        System.out.println("\n-----------------");
+        for(Integer key : hmap.keySet())
+            System.out.print(hmap.get(key));
+        System.out.println("\n-----------------");
+        HashSet<Character> hset = new HashSet<>();
+        for(int i=0;i<palindrome.length();i++)
+            hset.add(palindrome.charAt(i));
+        for(Character c : hset)
+            System.out.print(c);
+
+        //Problems 1 & 2 for Lab 4:
+        //An Instance variable is a variable who's data is only held by the instance of the class containing that variable
+        //An Instance Method must be called by an Instance of the Class (Getters and Setters)
+        //Examples of Instance Methods would be any method created in BusinessObjects (com.astontech.BO)
+        //Examples of Instance Variables would be any of the primitive data types used in Lessons & Labs.
+        //A Static variable is a variable is a variable that is available without loading an instance of the class containing it,.
+        //A Static method can be called without an instance of the class containing the method.
+        //Examples of static methods are Main() or any method in this file (Main.java). They don't need to be called by an instance of the class Main.
+        //Examples of static variables would be a counter for the number of instances of a class. That counting variable would have to be static.
+
+        //Reference type holds memory address, that memory address holds the actual value
+        //While Value types hold the data directly
+        //Strings are weird because strings point to addresses on string heap
+        //Reference type examples: Any Class Object we created, String, Arrays
+        //Value type examples: all prim data types,
+
+
+        //Make huge Palindrome for HashTable & HashMap since they print items
+        //in backwards order relative to eachother.
+        //Make Hash Set that has words that make up a story
+        // ^ This will be funny because the items always print in random order
+    }
+
+    private static void LessonValueVsRef(){
+        Employee firstEmp = new Employee("Bipin","Butala");
+        Employee secondEmp = firstEmp;
+        firstEmp.setFirstName("Camron");
+
+        System.out.println(secondEmp.getFirstName());
+
+        int firstInt = 10;
+        int secondInt = firstInt;
+        firstInt = 20;
+        System.out.println(secondInt);
+
+        Integer firstInteger = 10;
+        Integer secondInteger = firstInteger;
+        firstInteger = 20;
+        System.out.println(secondInteger);
+
+        String s1 = "Hi";
+        String s2 = s1;
+        s1 = "Bye";
+        System.out.println(s2);
+
+    }
+
+    private static void LessonHash(){
+        System.out.println("------HASH TABLE------");
+
+        Hashtable<Integer, String> firstHashTable = new Hashtable<>();
+        firstHashTable.put(1, "Abstraction");
+        firstHashTable.put(2, "Polymorphism");
+        firstHashTable.put(3, "Inheritance");
+        firstHashTable.put(4, "Encapsulation");
+        //firstHashTable.put(null, "d");    //NullPointerException
+
+        for(Integer key : firstHashTable.keySet()){
+            System.out.println("key: "+key+" | value: "+firstHashTable.get(key));
+        }
+
+        //System.out.println("Value from given key: "+oopPrinicip.get(3));
+        System.out.println("----------------------");
+
+        System.out.println("--------HASH MAP---------");
+
+        HashMap<Integer, String> firstHashMap = new HashMap<>();
+        firstHashMap.put(1, "Abstraction");
+        firstHashMap.put(2, "Polymorphism");
+        firstHashMap.put(3, "Inheritance");
+        firstHashMap.put(4, "Encapsulation");
+        firstHashMap.put(5, "Encapsulation"); //accepts duplicates
+        firstHashMap.put(6, null); //no NullPointerException
+
+        for(Integer key : firstHashMap.keySet())
+            System.out.println("key: "+key+" | value: "+firstHashMap.get(key));
+
+        System.out.println("--------------------------");
+
+        System.out.println("----------HASH SET---------------");
+
+        HashSet<String> firstHashSet = new HashSet<>();
+        firstHashSet.add("Abstracton");
+        firstHashSet.add("Polymorphism");
+        firstHashSet.add("Inheritance");
+        firstHashSet.add("Encapsulation");
+
+        for(String s : firstHashSet)
+            System.out.println(s);
+
+        System.out.println("-------------------------");
+    }
+
     private static void LessonCollectionsLAB(){
         List<Vehicle> VehicleList = new ArrayList<>();
         Vehicle veh1 = new Vehicle("ABC123");
