@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcaf8410-1f92-47d4-8932-d92de7aa713d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/mysql_connector_java_5_1_38_bin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/src/common/helpers/DateHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console/src/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/dao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/EmailDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/EmployeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/PersonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/PhoneDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/VehicleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/VehicleMakeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/VehicleModelDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/EmailDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/EmployeeDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/MySQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/PersonDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/PhoneDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/VehicleDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/VehicleMakeDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dao/src/com/astontech/dao/mysql/VehicleModelDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser_person.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-maven/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-maven/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-maven/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-maven/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-maven/src/main/java/mysql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-maven/test-maven.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-jpa/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-jpa/target/classes/META-INF/test-springboot-jpa.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/configuration/MvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/configuration/RepositoryConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/configuration/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/controllers/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/controllers/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/controllers/FormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/controllers/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/models/ContactModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/models/DemoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/java/mvc/repositories/DemoModelRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/webapp/WEB-INF/jsp/contact.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/webapp/WEB-INF/jsp/demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/webapp/WEB-INF/jsp/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/target/classes/mvc/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/target/classes/mvc/controllers/IndexController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-springboot-mvc/test-springboot-mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bo/bo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../bo/bo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bo/src/com/astontech/bo/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bo/src/com/astontech/bo/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bo/src/com/astontech/bo/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bo/src/com/astontech/bo/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bo/src/com/astontech/bo/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bo/src/com/astontech/bo/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bo/src/com/astontech/bo/VehicleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bo/src/com/astontech/bo/VehicleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../com.astontech.oop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../com.astontech.oop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/src/common/helpers/CharHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../common/src/common/helpers/CharHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/src/common/helpers/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../common/src/common/helpers/MathHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/src/common/helpers/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../common/src/common/helpers/StringHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console/console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../console/console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console/src/com/astontech/console/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console/src/com/astontech/console/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/bo/com/astontech/bo/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/bo/com/astontech/bo/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/bo/com/astontech/bo/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/bo/com/astontech/bo/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/bo/com/astontech/bo/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/bo/com/astontech/bo/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/console/com/astontech/console/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/console/com/astontech/console/Main.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1WOdjg8WtSjs1TsMgU2bQkrS2WX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcaf8410-1f92-47d4-8932-d92de7aa713d" name="Default Changelist" comment="" />
+      <created>1579024711314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579024711314</updated>
+      <workItem from="1579024716184" duration="3000" />
+    </task>
+    <servers />
+  </component>
+</project>
